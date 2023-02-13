@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS. Stacking context</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="block parent" style="position: relative; z-index: auto">
+        Parent block 1
+        <div class="block child blue">Child block 1</div>
+        <div class="block child red">Child block 2</div>
+        <div class="block child yellow" style="position: relative; z-index: 2">Child block 3</div>
+    </div>
+
+    <div class="block parent purple"  style="position: relative; z-index: 1">Parent block 2</div>
+</div>
+</body>
+</html>
