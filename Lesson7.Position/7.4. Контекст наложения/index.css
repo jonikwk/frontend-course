@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    width: 620px;
+    margin: 50px auto 500px auto;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #1de9b6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.parent {
+    width: 400px;
+    height: 400px;
+}
+
+.blue {
+    background-color: #00b0ff;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.red {
+    background-color: #ff1744;
+    margin-left: 60px;
+    margin-top: -170px;
+}
+
+.yellow {
+    background-color: #ffea00;
+    margin-left: 90px;
+    margin-top: -170px;
+}
+
+.purple {
+    background-color: #d500f9;
+    margin-left: 130px;
+    margin-top: -240px;
+}
