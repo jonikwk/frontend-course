@@ -2,22 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Specificity</title>
     <style>
+        /* 0.0.0 */
+
+        /* 0.0.1 */
         h1 {
+            color: red;
             width: 100%;
             text-align: center;
         }
 
+        /* 0.1.0 */
         .title {
             color: green;
         }
 
-        .text {
-            font-size: 20px;
-            color: darkblue;
+        /* 0.1.1 */
+        h1.title {
+            color: #1de9b6;
         }
 
+        /* 1.0.1 */
+        h1#title {
+            color: #ffea00;
+        }
+
+        /* 0.1.0 */
+        .text {
+            font-size: 20px;
+            color: darkblue !important;
+        }
+
+        /* 1.0.0 */
         #uniq-text {
             font-size: 24px;
             color: red;
@@ -25,7 +42,7 @@
     </style>
 </head>
 <body>
-<h1 class="title">
+<h1 class="title" id="title">
     Lorem Ipsum
 </h1>
 <blockquote>
@@ -70,7 +87,7 @@
     Donec gravida risus ut tellus facilisis, et luctus elit aliquet.
 </p>
 
-<p class="text" id="uniq-text">
+<p class="text" id="uniq-text" style="color: blueviolet">
     Donec finibus sem eu leo scelerisque, quis euismod nunc varius. Donec nibh velit, condimentum id porta vel,
     dignissim porta erat. Sed lectus est, ultricies quis lacus ac, gravida accumsan tellus. Etiam vehicula auctor
     risus, pellentesque venenatis dolor accumsan vel. Vestibulum non sollicitudin dui. Donec rhoncus felis nisi, at
