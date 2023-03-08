@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background-color: #1de9b6;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    background-color: #ffea00;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 24px;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    flex-basis: 250px;
+    border: 1px solid orangered;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    background-color: #b3d4fc;
+}
