@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child-selectors</title>
+    <style>
+        li:first-child {
+            color: orange;
+            background-color: black;
+            padding: 5px;
+        }
+
+        p:first-child {
+            color: lime;
+            background-color: black;
+            padding: 5px;
+        }
+
+        p:last-child {
+            color: lime;
+            background-color: black;
+            padding: 5px;
+        }
+
+        p:only-child {
+            color: lime;
+            background-color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>This text will be orange.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+
+<div>
+    <p>This text is selected!</p>
+    <p>This text isn't selected.</p>
+</div>
+
+<div>
+    <h2>This text isn't selected: it's not a `p`.</h2>
+    <p>This text is selected!</p>
+</div>
+
+<div>
+    <p>his text is selected!</p>
+</div>
+</body>
+</html>

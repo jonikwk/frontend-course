@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type selectors</title>
+    <style>
+        span:first-child {
+            color: red;
+        }
+
+        li:first-of-type {
+            color: orange;
+        }
+
+        p:first-of-type {
+            color: lime;
+            background-color: black;
+            padding: 5px;
+        }
+
+        div:first-of-type {
+            color: brown;
+            background-color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <span>I'm red span</span>
+    <li>This text will be orange.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+<div>
+    <p>This text is selected!</p>
+    <p>This text isn't selected.</p>
+</div>
+
+<div>
+    <h2>This text isn't selected: it's not a `p`.</h2>
+    <p>This text is selected.</p>
+</div>
+
+<div class="parent">
+    <h1>Child</h1>   <!-- h1:first-child, h1:first-of-type -->
+    <div>IChild</div> <!-- div:nth-child(2), div:first-of-type -->
+    <div>Child</div>
+    <div>Child</div>
+</div>
+</body>
+</html>

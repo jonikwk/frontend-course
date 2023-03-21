@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Not selector</title>
+    <style>
+        li:not(.first-item):not(:last-of-type) {
+            background: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="first-item">Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+</body>
+</html>
