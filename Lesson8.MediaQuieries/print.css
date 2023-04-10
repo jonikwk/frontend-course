@@ -1,0 +1,27 @@
+@media only print {
+    body {
+        font-family: "Times New Roman", serif;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 0.5cm;
+        padding: 0.5cm;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 0.5cm;
+        gap: 0.5cm;
+        border-color: black;
+        page-break-inside: avoid;
+    }
+}
+
+@media only print and(orientation: landscape) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5cm;
+        padding: 0.5cm;
+    }
+}
