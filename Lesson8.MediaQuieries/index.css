@@ -1,0 +1,123 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    counter-reset: card;
+    background-color: var(--background-color);
+}
+
+main {
+    height: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    grid-gap: 24px;
+    padding: 24px;
+
+}
+
+.card {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    place-items: center;
+    place-content: center;
+    color: var(--text-color);
+    border: 2px solid red;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.title::before {
+    counter-increment: card;
+    content: "Card №" counter(card);
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*    :root {*/
+/*        --background-color: black;*/
+/*        --text-color: white;*/
+/*    }*/
+/*}*/
+
+
+@media only screen and (max-width: 1280px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+}
+
+@media only print {
+    body {
+        font-family: "Times New Roman", serif;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 0.5cm;
+        padding: 0.5cm;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 0.5cm;
+        gap: 0.5cm;
+        border-color: black;
+        page-break-inside: avoid;
+    }
+}
